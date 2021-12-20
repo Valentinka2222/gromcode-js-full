@@ -16,4 +16,3 @@ no-return-assign
 no-undef
 prettier/prettier
 prettier/prettier
-prettier/prettier

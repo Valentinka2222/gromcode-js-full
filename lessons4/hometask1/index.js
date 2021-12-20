@@ -1,3 +1,4 @@
+/**/
 function run() {
   var a = 0;
 
