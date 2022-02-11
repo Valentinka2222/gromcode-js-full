@@ -1,8 +1,8 @@
 import { it } from 'eslint/lib/rule-tester/rule-tester';
-import getSum, { getSquareNumbers, getOddNumbers } from './calculator';
+import getSum, { getSquaredArray, getOddNumbers } from './calculator';
 
 it('should get squared numbers', () => {
-  const result = getSquareNumbers([1, 2, 3]);
+  const result = getSquaredArray([1, 2, 3]);
   expect(result).toEqual([1, 4, 9]);
 });
 
