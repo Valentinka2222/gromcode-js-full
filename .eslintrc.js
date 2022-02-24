@@ -21,3 +21,9 @@ module.exports = {
     'prefer-template': 0,
   },
 };
+{
+    "max-classes-per-file": [
+        "error",
+        { "ignoreExpressions": true, "max": 2 }
+    ]
+}
