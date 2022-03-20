@@ -7,11 +7,10 @@ export function getItemsList() {
 }
 getItemsList();
 export function getItemsArray() {
-  const elementsArray = document.querySelectorAll('.tool');
-  let NodeList = Array.from(elementsArray);
+  const NodeList = document.querySelectorAll('.tool');
 
-  console.dir(elementsArray);
-
-  return NodeList;
+  let elementArray = Array.from(NodeList);
+  console.dir(elementArray);
+  return elementArray;
 }
 getItemsArray();
