@@ -1,7 +1,8 @@
 'use-strick';
 
 export function getTitle() {
-  return document.querySelector('.title').textContent;
+  let text = document.querySelector('.title').textContent;
+  console.dir(text);
 }
 getTitle();
 
