@@ -1,32 +1,28 @@
 'use-strick';
 
 export function getTitle() {
-  let elementContent = document.querySelector('.title');
-  let text = elementContent.textContent;
-
-  return text;
+  let elementTitle = document.querySelector('.title');
+  return elementTitle.textContent;
 }
 getTitle();
 
 export function getDescription() {
   let element = document.querySelector('.about');
-  let text = element.innerText;
 
-  return text;
+  return element.innerText;
 }
 getDescription();
 
 export function getPlans() {
   let elementPlans = document.querySelector('.plans');
-  let text = elementPlans.innerHTML;
 
-  return text;
+  return elementPlans.innerHTML;
 }
 getPlans();
 
 export function getGoal() {
   let elementGoal = document.querySelector('.goal');
-  let text = elementGoal.outerHTML;
-  return text;
+
+  return elementGoal.outerHTML;
 }
 getGoal();
