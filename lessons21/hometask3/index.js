@@ -1,22 +1,21 @@
 'use-strick';
 
-export function getTitle() {
-  let text = document.querySelector('.title').textContent;
-  console.dir(text);
+function getTitle() {
+  return document.querySelector('.title').textContent;
 }
 getTitle();
-
-export function getDescription() {
+function getDescription() {
   return document.querySelector('.about').innerText;
 }
 getDescription();
 
-export function getPlans() {
+function getPlans() {
   return document.querySelector('.plans').innerHTML;
 }
 getPlans();
 
-export function getGoal() {
+function getGoal() {
   return document.querySelector('.goal').outerHTML;
 }
 getGoal();
+export { getDescription, getGoal, getPlans, getTitle };
