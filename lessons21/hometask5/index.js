@@ -1,4 +1,7 @@
 export function setButton(buttonText) {
   const elementBody = document.querySelector('body');
-  elementBody.innerHTML = buttonText;
+  const elementButton = document.createElement('button');
+  elementButton.innerHTML = buttonText;
+  elementBody.append(elementButton);
 }
+setButton('check');
