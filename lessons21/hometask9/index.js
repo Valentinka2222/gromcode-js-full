@@ -1,5 +1,3 @@
-'use strict';
-
 export function finishForm() {
   const elementForm = document.querySelector('.login-form');
   const elementInputPassword = document.querySelector('input');
@@ -10,4 +8,3 @@ export function finishForm() {
   elementInput.setAttribute('name', 'login');
   elementForm.prepend(elementInput);
 }
-finishForm();
