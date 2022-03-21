@@ -2,4 +2,4 @@ export function setButton(buttonText) {
   const elementBody = document.querySelector('body');
   elementBody.innerHTML = buttonText;
 }
-setButton('<button>button text </button>');
+setButton('<button>button text</button>');
