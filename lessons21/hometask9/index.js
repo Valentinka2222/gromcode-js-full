@@ -9,4 +9,3 @@ export function finishForm() {
   elementForm.prepend(elementInput);
   console.log(elementForm);
 }
-finishForm();
