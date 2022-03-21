@@ -14,4 +14,3 @@ export function finishList() {
   elementLi8.textContent = '8';
   elementList.append(elementLi8);
 }
-finishList();
