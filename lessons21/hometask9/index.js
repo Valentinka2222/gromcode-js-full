@@ -10,3 +10,4 @@ export function finishForm() {
   elementInput.setAttribute('name', 'login');
   elementForm.prepend(elementInput);
 }
+finishForm();
