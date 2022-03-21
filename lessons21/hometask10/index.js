@@ -13,4 +13,3 @@ export function manageClasses() {
     elementFour.classList.add('another-class');
   }
 }
-manageClasses();
