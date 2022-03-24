@@ -35,9 +35,9 @@ const arrLog = [
   logGreyDiv,
   logGreyP,
   logGreySpan,
-  logGreenDiv,
-  logGreenP,
   logGreenSpan,
+  logGreenP,
+  logGreenDiv,
 ];
 const eventList = function () {
   arrLog.map((elem) => attachBtn.addEventListener('click', elem));
