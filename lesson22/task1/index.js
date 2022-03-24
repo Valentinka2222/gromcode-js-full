@@ -46,6 +46,6 @@ const eventList = function () {
 clearBtn.addEventListener('click', removeList);
 attachBtn.addEventListener('click', eventList);
 const eventRemoveList = function () {
-  arr.map((elem) => attachBtn.removeEventListener('click', elem));
+  arrLog.map((elem) => attachBtn.removeEventListener('click', elem));
 };
 removeBtn.addEventListener('click', eventRemoveList);
