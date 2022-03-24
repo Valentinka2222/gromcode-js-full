@@ -8,8 +8,8 @@ const statusCheckbox = () => {
     console.log('false');
   }
 };
-const CheckboxText = () => {
-  alert(checkboxElem.checked);
+const inputText = () => {
+  console.log(checkboxElem.checked);
 };
 checkboxElem.addEventListener('click', statusCheckbox);
-checkboxElem.addEventListener('change', CheckboxText);
+checkboxElem.addEventListener('change', inputText);
