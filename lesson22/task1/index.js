@@ -31,6 +31,13 @@ pElem.addEventListener('click', logGreyP, true);
 pElem.addEventListener('click', logGreenP);
 spanElem.addEventListener('click', logGreySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
+divElem.addEventListener('click', logGreyDiv, true);
+divElem.addEventListener('click', logGreenDiv);
+pElem.addEventListener('click', logGreyP, true);
+pElem.addEventListener('click', logGreenP);
+spanElem.addEventListener('click', logGreySpan, true);
+spanElem.addEventListener('click', logGreenSpan);
+
 const arrLog = [
   logGreyDiv,
   logGreyP,
@@ -45,7 +52,4 @@ const eventList = function () {
 
 clearBtn.addEventListener('click', removeList);
 attachBtn.addEventListener('click', eventList);
-const eventRemoveList = function () {
-  arrLog.map((elem) => attachBtn.removeEventListener('click', elem));
-};
-removeBtn.addEventListener('click', eventRemoveList);
+removeBtn.removeEventListener('click', logGreenSpan, true);
