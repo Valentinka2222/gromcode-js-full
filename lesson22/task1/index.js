@@ -11,7 +11,6 @@ function removeList() {
     eventsListElem.removeChild(eventsListElem.firstChild);
   }
 }
-removeList();
 
 const logTarget = (text, color) => {
   eventsListElem.innerHTML += `<span style="color:${color}; margin-left: 8px;">${text}</span>`;
@@ -23,7 +22,7 @@ const logGreenSpan = logTarget.bind(null, 'SPAN', 'green');
 const logGreyDiv = logTarget.bind(null, 'DIV', 'grey');
 const logGreyP = logTarget.bind(null, 'P', 'grey');
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
-const eventList = function () {
+const eventList = () => {
   divElem.addEventListener('click', logGreyDiv, true);
   divElem.addEventListener('click', logGreenDiv);
   pElem.addEventListener('click', logGreyP, true);
