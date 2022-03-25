@@ -1,9 +1,9 @@
-const bodyBtn = document.querySelectorAll('.pagination__page');
+const divBtn = document.querySelectorAll('.pagination__page');
 
 function handleClick(event) {
   console.log(event.target.getAttribute('data-page-number'));
 }
 
-bodyBtn.forEach((button) => {
+divBtn.forEach((button) => {
   button.addEventListener('click', handleClick);
 });
