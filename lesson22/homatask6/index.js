@@ -1,7 +1,7 @@
-const btnelem = document.querySelector('.btn');
+const btnElem = document.querySelector('.btn');
 const bodyBtn = document.querySelector('body');
 const handleClick = (event) => {
-  if (btnelem) {
+  if (btnElem) {
     console.log(event.target.textContent);
   }
 };
