@@ -1,5 +1,7 @@
+const btnElem = document.querySelector('.btn');
+
 const handleClick = (event) => {
-  if (event.target.nodeName === 'BUTTON') {
+  if (event.target.classList.contains('btn')) {
     console.log(event.target.textContent);
   }
 };
