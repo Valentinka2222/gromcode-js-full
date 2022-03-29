@@ -1,3 +1,5 @@
+const boardSeatElem = document.querySelector('.board__selected-seat');
+
 function getSector() {
   const arenaElem = document.querySelector('.arena');
   for (let i = 1; i < 4; i += 1) {
@@ -5,8 +7,9 @@ function getSector() {
     sectorElem.classList.add('sector');
 
     arenaElem.appendChild(sectorElem);
-    sectorElem.addEventListener('click', function () {
-      alert(`S  ${i}`);
+
+    sectorElem.addEventListener('click', function sector1() {
+      boardSeatElem.textContent = `S ${i}`;
     });
   }
 }
@@ -20,8 +23,8 @@ function getSeats() {
       const sectorLineSeatElem = document.createElement('div');
       sectorLineSeatElem.classList.add('sector__seat');
       elem.append(sectorLineSeatElem);
-      sectorLineSeatElem.addEventListener('click', function () {
-        alert(`S ${i}`);
+      sectorLineSeatElem.addEventListener('click', function seat1() {
+        boardSeatElem.textContent = `S ${i}`;
       });
     });
   }
@@ -33,8 +36,8 @@ function getLines() {
       const sectorLineElem = document.createElement('div');
       sectorLineElem.classList.add('sector__line');
       elem.append(sectorLineElem);
-      sectorLineElem.addEventListener('click', function () {
-        alert(`L ${i}`);
+      sectorLineElem.addEventListener('click', function line1() {
+        boardSeatElem.textContent = `L ${i}`;
       });
     });
   }
