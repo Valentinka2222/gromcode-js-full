@@ -53,4 +53,3 @@ function getSector() {
 getSector();
 getLines();
 getSeats();
-console.log(boardSeatElem);
