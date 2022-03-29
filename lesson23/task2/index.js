@@ -1,16 +1,14 @@
 const boardSeatElem = document.querySelector('.board__selected-seat');
-const logTarget = (text, value) => {
-  boardSeatElem.textContent += `${text} ${value} `;
-};
-
-function removeElementBoard() {
+const removeElementBoard = () => {
   boardSeatElem.removeChild(boardSeatElem.firstChild);
-}
-
-removeElementBoard();
+};
+const logTarget = (text, value) => {
+  boardSeatElem.textContent += `${text} ${value}`;
+};
 
 function getLines() {
   const sectorElem = document.querySelectorAll('.sector');
+
   for (let i = 1; i < 11; i += 1) {
     sectorElem.forEach((elem) => {
       const sectorLineElem = document.createElement('div');
@@ -44,7 +42,7 @@ function getSector() {
 
     arenaElem.appendChild(sectorElem);
 
-    const sectorNumber = logTarget.bind(null, 'S', `${i} -`);
+    const sectorNumber = logTarget.bind(null, 'S', `${i} - `);
 
     sectorElem.addEventListener('click', sectorNumber, true);
   }
@@ -52,8 +50,5 @@ function getSector() {
 getSector();
 getLines();
 getSeats();
-function removeLastElementBoard() {
-  boardSeatElem.removeChild(boardSeatElem.lastChild);
-}
-
-removeLastElementBoard();
+const sectorElem = document.querySelectorAll('.sector');
+sectorElem.addEventListener('click', removeElementBoard());
