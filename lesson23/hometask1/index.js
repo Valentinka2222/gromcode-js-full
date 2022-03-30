@@ -43,6 +43,7 @@ const renderTasks = (tasksList) => {
 };
 renderTasks(tasks);
 const inputElem = document.querySelector('.task-input');
+const btnElem = document.querySelector('.create-task-btn');
 const inputText = () => {
   if (inputElem.value.length === 0) {
     return;
@@ -57,6 +58,7 @@ const inputText = () => {
 };
 
 inputText();
-inputElem.addEventListener('change', inputText);
+
+btnElem.addEventListener('click', inputText);
 
 // put your code here
