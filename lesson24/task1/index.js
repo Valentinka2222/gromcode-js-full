@@ -1,6 +1,6 @@
 'use strict';
 
-const weekDays = ['Mo', 'Tu', 'We', 'Th', 'FR', 'St', 'Su'];
+const weekDays = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'St', 'Su'];
 
 export function dayOfWeek(date, days) {
   const day = new Date(date).getDate();
@@ -8,4 +8,3 @@ export function dayOfWeek(date, days) {
   return weekDays[new Date(dateInFuture).getDay()];
 }
 const result = dayOfWeek(new Date(2022, 0, 1), 25);
-console.log(result);
