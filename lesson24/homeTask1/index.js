@@ -1,4 +1,4 @@
-const getDiff = (startDate, endDate) => {
+export const getDiff = (startDate, endDate) => {
   let diff = endDate - startDate;
 
   diff /= 1000;
