@@ -8,10 +8,11 @@ export const getDiff = (startDate, endDate) => {
   const seconds = Math.round(diff % 60);
 
   const dateStr = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  console.log(dateStr);
+
   return dateStr;
 };
 
-const dt1 = new Date('October 13, 2020 08:11:00');
-const dt2 = new Date('October 13, 2019 11:13:00');
+const dt1 = new Date(Date.UTC(2022, 3, 20, 5, 25, 50));
+const dt2 = new Date(Date.UTC(2023, 7, 10, 5, 40, 45));
+console.log(getDiff(dt2, dt1));
 console.log(getDiff(dt1, dt2));
