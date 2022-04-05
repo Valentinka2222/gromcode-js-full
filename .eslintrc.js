@@ -5,7 +5,10 @@ module.exports = {
     jest: true,
     browser: true,
   },
+
   rules: {
+    'prefer-destructuring': ['error', { object: true, array: false }],
+
     'no-alert': 0,
     'no-console': 0,
     'no-constant-condition': 0,
