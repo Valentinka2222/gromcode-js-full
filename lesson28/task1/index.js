@@ -1,6 +1,6 @@
 'use strict';
 
-const calc = (initNumber) => {
+export const calc = (initNumber) => {
   let result = initNumber;
   const calculator = {
     add(number) {
