@@ -9,13 +9,13 @@ export const onCreateTask = () => {
     return;
   }
   taskTitleInputElem = '';
-  const tasksList = getItem('taskList') || [];
+  const tasksList = getItem('tasksList') || [];
   const newTasksList = tasksList.concat({
     text,
     done: false,
     createDate: new Date().toISOString(),
     id: Math.random().toString(),
   });
-  setItem('taskList', newTasksList);
+  setItem('tasksList', newTasksList);
   renderTasks();
 };
