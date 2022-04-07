@@ -3,7 +3,7 @@ const date = new Date(2020, 0, 7, 17, 17, 17);
 export const shmoment = (date) => {
   let oldDate = date;
   let newDate = new Date(date);
-  console.log(oldDate.getDate());
+  console.log(oldDate.getFullYear());
   const calculator = {
     add(unitTime, value) {
       switch (unitTime) {
@@ -12,7 +12,8 @@ export const shmoment = (date) => {
           console.log(newDate);
           break;
         case 'years':
-          newDate.setFullDate(oldDate.getFullDate() + value);
+          newDate.setFullYear(oldDate.getFullYear() + value);
+
           break;
         case 'months':
           newDate.setMonth(oldDate.getMonth() + value);
@@ -35,14 +36,14 @@ export const shmoment = (date) => {
       }
       return this;
     },
-    substract(unitTime, value) {
+    subtract(unitTime, value) {
       switch (unitTime) {
         case 'days':
           newDate.setDate(oldDate.getDate() - value);
           console.log(newDate);
           break;
         case 'years':
-          newDate.setFullDate(oldDate.getFullDate() - value);
+          newDate.setFullYear(oldDate.getFullYear() - value);
           break;
         case 'months':
           newDate.setMonth(oldDate.getMonth() - value);
@@ -74,7 +75,8 @@ export const shmoment = (date) => {
 
 const result = shmoment(date)
   .add('days', 10)
+  .add('years', 2)
   .add('minutes', 10)
-  .substract('hours', 3)
+  .subtract('hours', 3)
   .result();
 console.log(result);
