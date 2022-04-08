@@ -2,14 +2,13 @@
 
 export const pinger = (count, period) => {
   let i = count;
-  if (--i > 0) {
-    console.log('Ping');
-  }
+  console.log('Ping');
   const interval = setInterval(() => {
-    console.log('Ping');
+    if (--i > 0) {
+      console.log('Ping');
+    } else {
+      clearInterval(interval);
+    }
   }, period);
-  setTimeout(() => {
-    clearInterval(interval);
-  }, count * period);
 };
 pinger(5, 1000);
