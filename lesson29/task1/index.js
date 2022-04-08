@@ -7,7 +7,7 @@ export const addImage = (imgSrc, callback) => {
   containerElem.append(imgElem);
   const onImageLoaded = () => {
     const { width, height } = imgElem;
-    callback(null, { width, height });
+    callback(null, imgElem);
   };
   imgElem.addEventListener('load', onImageLoaded);
 
@@ -27,3 +27,4 @@ const onImageLoaded = (error, imgElem) => {
 
   sizeElem.textContent = `${width} x ${height}`;
 };
+addImage(imgSrc, onImageLoaded);
