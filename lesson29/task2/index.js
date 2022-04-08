@@ -8,5 +8,3 @@ export const pinger = (count, period) => {
     clearInterval(interval);
   }, count * period);
 };
-
-pinger(5, 1000);
