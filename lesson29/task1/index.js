@@ -27,3 +27,4 @@ const onImageLoaded = (error, data) => {
 
   sizeElem.textContent = `${width} x ${height}`;
 };
+addImage(imgSrc, onImageLoaded);
