@@ -10,18 +10,19 @@ const addImage = (imgSrc, callback) => {
     callback(null, { width, height });
   };
   imgElem.addEventListener('load', onImageLoaded);
+
   imgElem.addEventListener('error', () => callback('Image load is failed'));
 };
 const imgSrc =
   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
-// callack function
-const onImageLoaded = (error, data) => {
+
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
   }
 
-  const { width, height } = data;
+  const { width, height } = imgElem;
   const sizeElem = document.querySelector('.image-size');
 
   sizeElem.textContent = `${width} x ${height}`;
@@ -29,8 +30,3 @@ const onImageLoaded = (error, data) => {
 addImage(imgSrc, onImageLoaded);
 
 export { addImage };
-// examples
-// addImage(
-//   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
-//   onImageLoaded,
-// );
