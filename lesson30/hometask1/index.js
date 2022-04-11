@@ -9,8 +9,7 @@ const userDataPromise = new Promise((resolve) => {
  * Выведите в консоль переменную userDataPromise
  * Ответьте себе на вопрос, какой тип данных имеет переменная userDataPromise?
  */
-userDataPromise.then((res) => console.log(res));
-
+console.log(userDataPromise);
 /*
  * Выведите в консоль переменную userData в обработчике промиса
  * Ответьте себе на вопрос, что находится в переменной userData?
