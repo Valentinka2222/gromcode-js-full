@@ -12,7 +12,7 @@ export const requestUserData = (userId) => {
           name: 'John',
           age: 17,
           userId: `${userId}`,
-          email: `${userId}'@example.com'`,
+          email: `${userId}@example.com`,
         });
       }, 1000);
     }
