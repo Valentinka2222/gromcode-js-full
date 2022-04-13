@@ -19,4 +19,4 @@ export const requestUserData = (userId) => {
   });
   return p;
 };
-requestUserData(589484).then((data) => console.log(data));
+requestUserData('userid777').then((data) => console.log(data));
