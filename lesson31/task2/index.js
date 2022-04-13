@@ -8,19 +8,19 @@ export const asyncCalculator = (numbr) => {
     }, 500);
   })
     .then(
-      (numbr) =>
+      (value) =>
         new Promise((resolve) => {
           setTimeout(() => {
-            const result = numbr * numbr;
+            const result = value * value;
             console.log(`Squared value:${result}`);
             resolve(result);
           }, 500);
         }),
     )
     .then(
-      (numbr) =>
+      (value) =>
         new Promise((resolve) => {
-          const result = numbr * 2;
+          const result = value * 2;
           console.log(`Doubled value:${result}`);
           resolve(result);
         }),
