@@ -1,30 +1,37 @@
-/* здесь мы создаем промис, который резолвит объект { name: 'Tom', age: 17 } через 1 секунду */
-const userDataPromise = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve({ name: 'Tom', age: 17 });
-  }, 1000);
+const successPromise = new Promise((resolve) => {
+  resolve(32);
 });
 
 /*
- * Выведите в консоль переменную userDataPromise
- * Ответьте себе на вопрос, какой тип данных имеет переменная userDataPromise?
- */
-console.log(userDataPromise);
-/*
- * Выведите в консоль переменную userData в обработчике промиса
- * Ответьте себе на вопрос, что находится в переменной userData?
- */
-userDataPromise.then(function onSuccess(userData) {
-  console.log(userData);
-});
-
-/*
- * подпишитесь на успешное выполнение промиса userDataPromise
- * используйте метод .then
- * в обработчике промиса (ф-ция внутри .then() ) выведите в консоль строку 'My name is Tom. I am 17 years old'
- * Tom и 17 достаньте с данных, которые приходят в ф-цию onSuccess
+ * исправь цепочку промисов, чтобы в последнем обработчике вывелось нужное число
  */
 
-userDataPromise.then(function onSuccess(userData) {
-  console.log(`My name is ${userData.name}. I am ${userData.age} years old`);
-});
+successPromise
+  .then((number) => {
+    const halfNumber = number / 2;
+    return halfNumber;
+  })
+  .then((number) => {
+    /* fix this handler */
+    const squaredNumber = number * number;
+    return squaredNumber;
+  })
+  .then((result) => {
+    console.log(result); // 256
+  });
+
+/*
+ * исправь цепочку промисов, чтобы в последнем обработчике вывелось нужное число
+ */
+successPromise
+  .then((number) => {
+    const result = number * 10;
+    return result;
+  })
+  .then((result) => {
+    console.log(result); // 320
+  });
+
+console.log(
+  '!!! Обрати внимание, что этот текст вывелся самым первым. Ведь это синхронный код, а промисы - асинхронны !!!',
+);
