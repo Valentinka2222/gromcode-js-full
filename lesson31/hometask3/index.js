@@ -8,4 +8,4 @@ export const delay = (time) => {
   });
   return p;
 };
-delay(300).then(() => console.log('Done'));
+delay(3000).then(() => console.log('Done'));
