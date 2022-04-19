@@ -7,22 +7,22 @@ const defaultAvatar =
 userAvatarElem.src = defaultAvatar;
 
 const fetchUserData = (userName) => {
-  fetch(`http://api.github.com/users/${userName}`).then((response) => {
-    response.json().then((result) => console.log(result));
-  });
+  return fetch(`http://api.github.com/users/${userName}`).then((response) =>
+    response.json(),
+  );
 };
 
-const renderUserData = (UserData) => {
-  const { avatar_url, name, location } = UserData;
+const renderUserData = (userData) => {
+  const { avatar_url, name, location } = userData;
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
   userLocationElem.textContent = location ? `from ${location}` : '';
 };
 
-const showUserBtnElem = document.querySelector('.name-form__btn ');
+const showUserBtnElem = document.querySelector('.name-form__btn');
 const userNameInputElem = document.querySelector('.name-form__input');
 const onSearchUser = () => {
-  const userName = userNameInputElem.ariaValueMax;
-  fetchUserData(userName).then((UserData) => renderUserData(UserData));
+  const userName = userNameInputElem.value;
+  fetchUserData(userName).then((userData) => renderUserData(userData));
 };
 showUserBtnElem.addEventListener('click', onSearchUser);
