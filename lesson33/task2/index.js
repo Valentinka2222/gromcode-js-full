@@ -20,8 +20,8 @@ getTasksList().then((tasksList) => {
 getTaskById('2').then((taskData) => {
   console.log(taskData); // {'id':'2', 'done':true ... }
 });
-const user1 = { id: '1', done: false };
+/*const user1 = { id: '1', done: false };
 fetch('https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/tasks', {
   method: 'POST',
   body: user,
-});
+});*/
