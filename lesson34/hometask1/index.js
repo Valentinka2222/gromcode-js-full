@@ -11,7 +11,10 @@ export function getUserById(userId) {
 export function createUser(userData) {
   return fetch(baseUrl, {
     method: 'POST',
-    body: userData,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    body: JSON.stringify(userData),
   }).then((response) => response.json());
 }
 
@@ -24,6 +27,9 @@ export function deleteUser(userId) {
 export function updateUser(userId, userData) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
-    body: userData,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+    body: JSON.stringify(userData),
   }).then((response) => response.json());
 }
