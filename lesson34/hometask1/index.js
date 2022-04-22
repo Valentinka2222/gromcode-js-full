@@ -15,7 +15,7 @@ export function createUser(userData) {
     headers: {
       'content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify(userData),
+    body: userData,
   }).then((response) => response.json());
 }
 
