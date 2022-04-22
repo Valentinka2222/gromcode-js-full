@@ -16,7 +16,7 @@ export function createUser(userData) {
       'content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(userData),
-  });
+  }).then((response) => response.json());
 }
 
 export function deleteUser(userId) {
