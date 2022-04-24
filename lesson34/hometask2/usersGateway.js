@@ -29,4 +29,3 @@ export const deleteUser = (userId) => {
     method: 'DELETE',
   });
 };
-//getUser().then((res) => alert(JSON.stringify(res)));

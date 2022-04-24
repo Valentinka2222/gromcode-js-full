@@ -11,4 +11,5 @@ export const getValueInput = () => {
     password: password.value,
   };
   createUser(user).then(() => getUser());
+  getUser().then((res) => alert(JSON.stringify(res)));
 };
