@@ -10,7 +10,5 @@ export const getValueInput = () => {
     name: name.value,
     password: password.value,
   };
-  createUser(user)
-    .then(() => getUser())
-    .then((users) => alert(users));
+  createUser(user).then(() => getUser());
 };
