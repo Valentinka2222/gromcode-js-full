@@ -1,9 +1,7 @@
 const baseUrl = 'https://626567dd94374a2c506ffa47.mockapi.io/newUser';
 
 export const getUser = () => {
-  return fetch(baseUrl)
-    .then((response) => response.json())
-    .then((users) => alert(users));
+  return fetch(baseUrl).then((response) => response.json());
 };
 
 export const createUser = (userData) => {
@@ -31,3 +29,4 @@ export const deleteUser = (userId) => {
     method: 'DELETE',
   });
 };
+getUser().then((res) => alert(JSON.stringify(res)));
