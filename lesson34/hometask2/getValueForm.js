@@ -1,7 +1,6 @@
 import { createUser, getUser } from './usersGateway.js';
 
 export const getValueInput = () => {
-  const inputElem = document.querySelectorAll('.form-input');
   const email = document.querySelector('input[name = "email"]');
   const name = document.querySelector('input[name = "name"]');
   const password = document.querySelector('input[name = "password"]');
@@ -11,8 +10,8 @@ export const getValueInput = () => {
     name: name.value,
     password: password.value,
   };
+  document.getElementsByTagName('input').value = '';
   createUser(user).then(() => getUser());
 
   getUser().then((res) => alert(JSON.stringify(res)));
-  inputElem.value = '';
 };
