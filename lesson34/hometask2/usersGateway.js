@@ -1,4 +1,4 @@
-const baseUrl = 'https://626567dd94374a2c506ffa47.mockapi.io/newUser';
+export const baseUrl = 'https://626567dd94374a2c506ffa47.mockapi.io/newUser';
 
 export const getUser = () => {
   return fetch(baseUrl).then((response) => response.json());

@@ -1,6 +1,6 @@
 import { createUser, getUser } from './usersGateway.js';
 
-const baseUrl = 'https://626567dd94374a2c506ffa47.mockapi.io/newUser';
+import { baseUrl } from './usersGateway.js';
 
 export const getValueInput = () => {
   const email = document.querySelector('input[name = "email"]');
