@@ -10,9 +10,9 @@ export const getValueInput = () => {
     name: name.value,
     password: password.value,
   };
-  let formInputElem = document.querySelectorAll('.form-input');
-  formInputElem = '';
-  createUser(user).then(() => getUser());
 
+  createUser(user).then(() => getUser());
+  let formInputElem = document.querySelectorAll('input');
+  formInputElem = '';
   getUser().then((res) => alert(JSON.stringify(res)));
 };
