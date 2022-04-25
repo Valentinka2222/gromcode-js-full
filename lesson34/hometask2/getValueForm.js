@@ -1,9 +1,11 @@
 import { createUser, getUser } from './usersGateway.js';
 
+const baseUrl = 'https://626567dd94374a2c506ffa47.mockapi.io/newUser';
+
 export const getValueInput = () => {
-  let email = document.querySelector('input[name = "email"]');
-  let name = document.querySelector('input[name = "name"]');
-  let password = document.querySelector('input[name = "password"]');
+  const email = document.querySelector('input[name = "email"]');
+  const name = document.querySelector('input[name = "name"]');
+  const password = document.querySelector('input[name = "password"]');
 
   const user = {
     email: email.value,
@@ -13,9 +15,13 @@ export const getValueInput = () => {
 
   createUser(user).then(() => getUser());
 
-  email = '';
-  name = '';
-  password = '';
+  fetch(baseUrl).then((response) => {
+    if (response.ok) {
+      email.value = '';
+      name.value = '';
+      password.value = '';
+    }
+  });
 
   getUser().then((res) => alert(JSON.stringify(res)));
 };

@@ -10,5 +10,10 @@ export const validator = () => {
   }
 };
 
+export const stopDefAct = (event) => {
+  event.preventDefault();
+};
+formControlElem.addEventListener('click', stopDefAct, false);
+
 formControlElem.addEventListener('input', validator);
 registerButtonElem.addEventListener('click', getValueInput);
