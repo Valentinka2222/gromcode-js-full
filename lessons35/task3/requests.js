@@ -2,17 +2,16 @@ import { createRepoListElem } from './createRep.js';
 
 import { renderUserData } from './renderer.js';
 
+const baseUrl = 'https://api.github.com/users';
+
 export const fetchUserData = (userName) => {
-  return fetch(`https://api.github.com/users/${userName}`).then((response) =>
-    response.json(),
-  );
+  return fetch(`${baseUrl}/${userName}`).then((response) => response.json());
 };
 export const fetchRep = (reposName) => {
-  return fetch(`https://api.github.com/users/${reposName}/repos`).then(
-    (response) =>
-      response
-        .json()
-        .then((repos) => repos.map((elem) => createRepoListElem(elem.name))),
+  return fetch(`${baseUrl}/${reposName}/repos`).then((response) =>
+    response
+      .json()
+      .then((repos) => repos.map((elem) => createRepoListElem(elem.name))),
   );
 };
 export const onSearchUser = () => {
