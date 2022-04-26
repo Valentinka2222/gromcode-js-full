@@ -2,8 +2,8 @@ const successRequest = Promise.resolve({ name: 'Tom' });
 
 successRequest
   .then(function onSuccess1(data) {
-    console.log(data);
-    throw new Error('Error with data');
+    console.log('onSuccess1', data);
+    return Promise.reject(new Error('Error with data'));
   })
   .catch(function onError1(error) {
     console.error('onError1', error.message);
@@ -12,8 +12,7 @@ successRequest
 const failRequest = Promise.reject(new Error('Something went wrong'));
 
 failRequest
-  .catch(function onError2(error) {
-    console.error('onError2', error.message);
+  .catch(function onError2() {
     return Promise.reject(new Error('Server error'));
   })
   .then(function onSuccess2(data) {
