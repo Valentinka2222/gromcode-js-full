@@ -24,7 +24,7 @@ export const onSearchUser = () => {
   fetchUserData(userName).then((userData) => renderUserData(userData));
 
   try {
-    fetchRep, fetchUserData, onSearchUser;
+    fetchRep, fetchUserData;
   } catch (e) {
     alert('Failed to load data');
   } finally {
