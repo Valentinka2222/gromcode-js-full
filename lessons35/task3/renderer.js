@@ -17,6 +17,10 @@ export const renderUserData = (userData) => {
   userReposUrlElem.textContent = repos_url;
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
+
+  fetchUserData(name);
+
+  fetchRep(name);
   const successRequest = Promise.resolve({
     avatar_url,
     name,
@@ -31,8 +35,4 @@ export const renderUserData = (userData) => {
       alert(new Error('Failed to load data'));
     }
   });
-
-  fetchUserData(name);
-
-  fetchRep(name);
 };
