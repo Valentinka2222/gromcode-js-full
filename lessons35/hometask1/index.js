@@ -1,10 +1,11 @@
 export const parseUser = jsonString => {
-  const userData = JSON.parse(jsonString);
+  let userData;
   try {
-    userData;
+    userData = JSON.parse(jsonString);
   } catch (err) {
-    console.err(err);
-    return null;
+    if (err instanceof SyntaxError) {
+      return null;
+    }
   }
   return userData;
 };
