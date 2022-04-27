@@ -18,7 +18,9 @@ export const onSearchUser = () => {
   const spinnerElem = document.querySelector('.spinner_hidden');
   const userNameInputElem = document.querySelector('.name-form__input');
   const userName = userNameInputElem.value;
-
+  if (!userName) {
+    return;
+  }
   spinnerElem.classList.remove('spinner_hidden');
 
   fetchUserData(userName).then((userData) => renderUserData(userData));
