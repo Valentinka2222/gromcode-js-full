@@ -18,6 +18,13 @@ export const renderUserData = (userData) => {
   userReposUrlElem.textContent = repos_url;
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
+  const successRequest = Promise.resolve(userData);
+  successRequest.then((data) => {
+    if (data) {
+      const spinnerElem = document.querySelector('.spinner');
+      spinnerElem.classList.add('spinner_hidden');
+    }
+  });
 
   fetchUserData(name);
 

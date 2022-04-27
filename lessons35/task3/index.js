@@ -6,13 +6,6 @@ const userNameInputElem = document.querySelector('.name-form__input');
 const spinner = () => {
   const spinnerElem = document.querySelector('.spinner_hidden');
   spinnerElem.classList.remove('spinner_hidden');
-  /*try {
-    fetchRep, fetchUserData;
-  } catch (e) {
-    alert('Failed to load data');
-  } finally {
-    spinnerElem.classList.add('spinner_hidden');
-  }*/
 };
 
 userNameInputElem.addEventListener('click', spinner);

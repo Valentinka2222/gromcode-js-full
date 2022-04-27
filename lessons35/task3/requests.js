@@ -23,6 +23,5 @@ export const onSearchUser = () => {
 
   fetchUserData(userName).then((userData) => {
     renderUserData(userData);
-    // spinnerElem.classList.add('spinner_hidden');
   });
 };
