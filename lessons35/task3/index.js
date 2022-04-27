@@ -8,7 +8,7 @@ const spinner = () => {
   spinnerElem.classList.remove('spinner_hidden');
 };
 
-userNameInputElem.addEventListener('click', spinner);
+showUserBtnElem.addEventListener('click', spinner);
 
 window.addEventListener('unhandledrejection', function (event) {
   alert(event.promise);
