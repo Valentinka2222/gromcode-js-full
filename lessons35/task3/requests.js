@@ -21,9 +21,11 @@ export const onSearchUser = () => {
   if (!userName) {
     return;
   }
-  spinnerElem.classList.remove('spinner_hidden');
 
-  fetchUserData(userName).then((userData) => renderUserData(userData));
+  fetchUserData(userName).then((userData) => {
+    spinnerElem.classList.remove('spinner_hidden');
+    renderUserData(userData);
+  });
 
   try {
     fetchRep, fetchUserData;
