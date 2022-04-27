@@ -11,18 +11,24 @@ userAvatarElem.src = defaultAvatar;
 
 export const renderUserData = (userData) => {
   createReposElem();
-
   const userReposUrlElem = document.querySelector('.repos_url');
   const { avatar_url, name, location, repos_url } = userData;
   userLocationElem.textContent = location ? `from ${location}` : '';
   userReposUrlElem.textContent = repos_url;
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
-  const successRequest = Promise.resolve(userData);
+  const successRequest = Promise.resolve({
+    avatar_url,
+    name,
+    location,
+    repos_url,
+  });
   successRequest.then((data) => {
     if (data) {
       const spinnerElem = document.querySelector('.spinner');
       spinnerElem.classList.add('spinner_hidden');
+    } else {
+      alert(new Error('Failed to load data'));
     }
   });
 
