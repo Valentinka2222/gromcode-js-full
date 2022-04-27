@@ -4,8 +4,8 @@ import { renderUserData } from './renderer.js';
 
 const baseUrl = 'https://api.github.com/users';
 
-export const fetchUserData = (userName) => {
-  return fetch(`${baseUrl}/${userName}`).then((response) => response.json());
+export const fetchUserData = (USERNAME) => {
+  return fetch(`${baseUrl}/${USERNAME}`).then((response) => response.json());
 };
 export const fetchRep = (reposName) => {
   return fetch(`${baseUrl}/${reposName}/repos`).then((response) =>
@@ -21,10 +21,10 @@ export const onSearchUser = () => {
   if (!userName) {
     return;
   }
-
+  spinnerElem.classList.remove('spinner_hidden');
   fetchUserData(userName).then((userData) => {
-    spinnerElem.classList.remove('spinner_hidden');
     renderUserData(userData);
+    // spinnerElem.classList.add('spinner_hidden');
   });
 
   try {
