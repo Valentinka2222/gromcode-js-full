@@ -1,10 +1,8 @@
 import { onSearchUser } from './requests.js';
 
-import { fetchRep, fetchUserData } from './requests.js';
-
 const showUserBtnElem = document.querySelector('.name-form__btn');
 showUserBtnElem.addEventListener('click', onSearchUser);
-
+const userNameInputElem = document.querySelector('.name-form__input');
 const spinner = () => {
   const spinnerElem = document.querySelector('.spinner_hidden');
   spinnerElem.classList.remove('spinner_hidden');
@@ -17,7 +15,8 @@ const spinner = () => {
   }*/
 };
 
-showUserBtnElem.addEventListener('click', spinner);
+userNameInputElem.addEventListener('click', spinner);
+
 window.addEventListener('unhandledrejection', function (event) {
   alert(event.promise);
 });
