@@ -7,7 +7,7 @@ import { renderUserData } from './user.js';
 import { showSpinner, hiddenSpinner } from './spiner.js';
 
 const defaultUser = {
-  avatar_url: 'https://avatars.githubusercontent.com/u10001',
+  avatar_url: 'https://avatars3.githubusercontent.com/u10001',
   name: '',
   location: '',
 };
