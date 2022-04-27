@@ -21,15 +21,21 @@ export const renderUserData = (userData) => {
 
   fetchRep(name);
   const successRequest = Promise.resolve(userData);
-  successRequest.then((data) => {
-    if (data) {
-      const spinnerElem = document.querySelector('.spinner');
-      spinnerElem.classList.add('spinner_hidden');
-    }
-  });
 
-  const failedRequest = Promise.reject(new Error('Failed to load data'));
+  successRequest
+    .then((data) => {
+      if (data) {
+        const spinnerElem = document.querySelector('.spinner');
+        spinnerElem.classList.add('spinner_hidden');
+      }
+    })
+    .catch((err) => {
+      // const err = new Error('Failed to load data');
+      alert(err);
+    });
+
+  /*const failedRequest = Promise.reject(new Error('Failed to load data'));
   failedRequest.catch((err) => {
     alert(err.message);
-  });
+  });*/
 };

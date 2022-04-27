@@ -8,11 +8,9 @@ export const fetchUserData = (userName) => {
   return fetch(`${baseUrl}/${userName}`).then((response) => response.json());
 };
 export const fetchRep = (reposName) => {
-  return fetch(`${baseUrl}/${reposName}/repos`).then((response) =>
-    response
-      .json()
-      .then((repos) => repos.map((elem) => createRepoListElem(elem.name))),
-  );
+  return fetch(`${baseUrl}/${reposName}/repos`)
+    .then((response) => response.json())
+    .then((repos) => repos.map((elem) => createRepoListElem(elem.name)));
 };
 export const onSearchUser = () => {
   const userNameInputElem = document.querySelector('.name-form__input');
