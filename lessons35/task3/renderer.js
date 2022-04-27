@@ -16,7 +16,7 @@ export const renderUserData = (userData) => {
   userReposUrlElem.textContent = repos_url;
   userAvatarElem.src = avatar_url;
   userNameElem.textContent = name;
-
+  console.log(userData);
   fetchUserData(name);
 
   fetchRep(name);
@@ -25,8 +25,11 @@ export const renderUserData = (userData) => {
     if (data) {
       const spinnerElem = document.querySelector('.spinner');
       spinnerElem.classList.add('spinner_hidden');
-    } else {
-      alert(new Error('Failed to load data'));
     }
+  });
+
+  const failedRequest = Promise.reject(new Error('Failed to load data'));
+  failedRequest.catch((err) => {
+    alert(err.message);
   });
 };

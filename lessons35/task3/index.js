@@ -10,6 +10,6 @@ const spinner = () => {
 
 showUserBtnElem.addEventListener('click', spinner);
 
-window.addEventListener('unhandledrejection', function (event) {
+/*window.addEventListener('unhandledrejection', function (event) {
   alert(event.promise);
-});
+});*/
