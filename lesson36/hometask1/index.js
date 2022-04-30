@@ -10,6 +10,9 @@ export const getUsersBlogs = async users => {
     const responseArr = await users.map(user => {
       const response = fetch(`https://api.github.com/users/${user}`)
         .then(response => {
+          if (!response.ok) {
+            return null;
+          }
           return response.json();
         })
         .then(user => {
