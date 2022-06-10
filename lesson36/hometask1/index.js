@@ -1,10 +1,5 @@
 'use strict';
 
-/**
- * @param {string[]} users
- * @return {promise}
- */
-
 export const getUsersBlogs = async users => {
   try {
     const responseArr = await users.map(user => {

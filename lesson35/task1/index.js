@@ -8,7 +8,6 @@ try {
   const jsonString = '{ "singer": "Weekend", "albom": "After Hours" }';
 
   const user = JSON.parse(jsonString);
-  console.log('User data: ', user);
   userParsingResult = 'success';
 } catch (e) {
   userParsingResult = 'error';
